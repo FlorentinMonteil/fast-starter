@@ -29,7 +29,7 @@ module.exports = {
       },
       {
         test: /\.styl$/,
-        loader: 'style-loader!css-loader!stylus-loader?paths=' + path.resolve("src/styles")
+        loader: 'style-loader!css-loader!postcss-loader!stylus-loader?paths=' + path.resolve("src/styles")
       },
       // HTML
       {
@@ -49,9 +49,9 @@ module.exports = {
     ],
     noParse: []
   },
-  postcss: [
-    autoprefixer
-  ],
+  postcss: function () {
+    return [autoprefixer];
+  },
   plugins: [
     new HtmlWebpackPlugin({
       favicon: 'favicon.png',

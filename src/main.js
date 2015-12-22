@@ -1,1 +1,1 @@
-import MainStyle from 'css/main.styl';
+import MainStyle from 'styles/main.styl';

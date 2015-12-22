@@ -1,4 +1,4 @@
-@import "./reset.styl";
+@import "./reset.styl"
 
 html,
 body,
@@ -7,7 +7,8 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #0D47A1;
+  background: #263238;
+  position: relative;
 }
 
 h1{
@@ -20,5 +21,6 @@ h1{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%) translateY(-50%);
+  user-select: none;
 }
